@@ -8,6 +8,9 @@ public class BeehiveTest {
 
     @Test
     public void getHeight() {
+        double hiveHeight = 2.5;
+        Beehive instance = new Beehive(hiveHeight);
+        assertEquals(hiveHeight, instance.getHeight(), 0.0);
     }
 
     @Test
