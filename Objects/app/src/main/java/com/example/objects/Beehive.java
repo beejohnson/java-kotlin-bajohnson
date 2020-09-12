@@ -39,15 +39,13 @@ public class Beehive {
         }
     }
 
-    public boolean isGrayanotoxin() {
-        return Grayanotoxin;
+    public boolean Poisoned() {
+        return Poisoned;
     }
 
-    public void setGrayanotoxin(boolean grayanotoxin) {
-        Grayanotoxin = grayanotoxin;
-    }
 
-    public boolean Grayanotoxin;
+
+    public boolean Poisoned;
 
 }
 

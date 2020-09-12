@@ -40,11 +40,9 @@ public class BeehiveTest {
     }
 
     @Test
-    public void isGrayanotoxin() {
+    public void Poisoned() {
 
     }
 
-    @Test
-    public void setGrayanotoxin() {
-    }
+
 }
