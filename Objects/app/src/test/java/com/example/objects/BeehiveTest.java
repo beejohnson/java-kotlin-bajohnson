@@ -17,7 +17,7 @@ public class BeehiveTest {
     public void isDry() {
         double hiveHeight = 2.5;
         Beehive instance = new Beehive(hiveHeight);
-        assertEquals(true, instance.isDry());
+        assertTrue(instance.isDry());
     }
 
     @Test
@@ -36,12 +36,16 @@ public class BeehiveTest {
         assertEquals(0.0, instance.getHoneyLevel(), 0.0);
         double newHoneyLevel = 1;
         instance.setHoneyLevel(newHoneyLevel);
-        assertEquals(newHoneyLevel, instance.getHoneyLevel(), 0.0)
-    }
+        assertEquals(newHoneyLevel, instance.getHoneyLevel(), 0.0);    }
 
     @Test
     public void Poisoned() {
-
+        double hiveHeight = 2.5;
+        Beehive instance = new Beehive(hiveHeight);
+        double HoneyLevel = 1;
+        assertFalse(instance.isPoisoned());
+        instance.setPoisoned(true);
+        assertTrue(instance.isPoisoned());
     }
 
 

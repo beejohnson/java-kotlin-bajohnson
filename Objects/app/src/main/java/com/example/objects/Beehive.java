@@ -39,7 +39,7 @@ public class Beehive {
         }
     }
 
-    public boolean Poisoned() {
+    public boolean isPoisoned() {
         return Poisoned;
     }
 
@@ -47,6 +47,8 @@ public class Beehive {
 
     public boolean Poisoned;
 
+    public void setPoisoned(boolean b) {
+    }
 }
 
 
