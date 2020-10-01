@@ -6,8 +6,9 @@ import static org.junit.Assert.*;
 
 public class DefaultHiveTest {
 
-    @Test
+    @Test //getHeight test?
     public void getHeight() {
+
     }
 
     @Test
