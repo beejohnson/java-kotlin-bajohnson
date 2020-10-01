@@ -9,13 +9,13 @@ public class BeeHive extends DefaultHive {
         super(height, level);
     }
 
-    public double getOilLevel() {
+    public double getHoneyLevel() {
         return getLevel();
     }
 
     // method (setter)
-    public void setOilLevel(double BeeLevel) {
-        setLevel(BeeLevel);
+    public void setOilLevel(double HoneyLevel) {
+        setLevel(HoneyLevel);
     }
 
     public boolean isCapped() {

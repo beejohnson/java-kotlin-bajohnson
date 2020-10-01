@@ -7,11 +7,11 @@ import static org.junit.Assert.*;
 public class BeeHiveTest {
 
     @Test
-    public void getOilLevel() {
+    public void getHoneyLevel() {
     }
 
     @Test
-    public void setOilLevel() {
+    public void setHoneyLevel() {
     }
 
     @Test
