@@ -14,7 +14,7 @@ public class BeeHive extends DefaultHive {
     }
 
     // method (setter)
-    public void setOilLevel(double HoneyLevel) {
+    public void setHoneyLevel(double HoneyLevel) {
         setLevel(HoneyLevel);
     }
 
