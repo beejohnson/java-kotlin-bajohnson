@@ -9,6 +9,10 @@ public interface Hive {
 
     void setLevel(double level);
 
+    default boolean isEmpty() {
+        return getLevel() <= 0.0;
+    }
+
     String getOwner();
 
     void setOwner(String owner);
