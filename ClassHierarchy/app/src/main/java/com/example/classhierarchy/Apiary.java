@@ -54,7 +54,7 @@ public class Apiary extends DefaultHive {
 
     public boolean emptyComb() { return isEmpty(); }
 
-    public boolean Graynotoxin() {
+    public boolean Graynotoxin(boolean b) {
         return graynotoxin;
     }
 
