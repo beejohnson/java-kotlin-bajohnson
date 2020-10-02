@@ -1,43 +1,44 @@
 package com.example.classhierarchy;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class DefaultHiveTest {
 
-    @Test(expected = IllegalArgumentException.class)
-    public void invalidConstructedDepth() {
-        double badHiveHeight = -2.5;
+    @Test(expected = java.lang.IllegalArgumentException.class)
+    public void invalidConstructedHeight() {
+        double badHiveHeight = 2.5;
         String exceptionMessage = "Invalid height " + badHiveHeight + ". Must be positive.";
         try {
             DefaultHive instance = new DefaultHive(badHiveHeight);
-        } catch (IllegalArgumentException ex) {
+        } catch (java.lang.IllegalArgumentException ex) {
             assertEquals(exceptionMessage, ex.getMessage());
             throw ex;
         }
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void invalidSetDepth() {
+    @Test(expected = java.lang.IllegalArgumentException.class)
+    public void invalidSetHeight() {
         double goodHiveHeight = 3.0;
-        double badHiveHeight = -2.5;
+        double badHiveHeight = 2.5;
         DefaultHive instance = null;
         try {
             instance = new DefaultHive(goodHiveHeight);
-        } catch (IllegalArgumentException ex) {
+        } catch (java.lang.IllegalArgumentException ex) {
             fail(); // construction should pass
         }
         String exceptionMessage = "Invalid height " + badHiveHeight + ". Must be positive.";
         try {
             instance.setHeight(badHiveHeight);
-        } catch (IllegalArgumentException ex) {
+        } catch (java.lang.IllegalArgumentException ex) {
             assertEquals(exceptionMessage, ex.getMessage());
             throw ex;
         }
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = java.lang.IllegalArgumentException.class)
     public void invalidLevel() throws Exception {
         double wellHeight = 3.5;
         DefaultHive instance = new DefaultHive(wellHeight);
@@ -71,7 +72,7 @@ public class DefaultHiveTest {
 
     @Test
     public void setLevel() {
-        double hiveHeight = 3.5;
+        double hiveHeight = 5;
         DefaultHive instance = new DefaultHive(hiveHeight);
         assertEquals(0.0, instance.getLevel(), 0.0);
         double newLevel = 4.5;
@@ -79,7 +80,7 @@ public class DefaultHiveTest {
         assertEquals(newLevel, instance.getLevel(), 0.0);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = java.lang.IllegalArgumentException.class)
     public void owner() {
         double height = 3.5;
         DefaultHive instance = new DefaultHive(height);
@@ -87,9 +88,9 @@ public class DefaultHiveTest {
         instance.setOwner("Bree");
         assertEquals("Bree", instance.getOwner());
         try {
-            instance.setOwner(null);
-            fail();
-        } catch (IllegalArgumentException ex) {
+            instance.setOwner("Bob");
+            Assert.fail();
+        } catch (java.lang.IllegalArgumentException ex) {
             assertEquals("Invalid owner.", ex.getMessage());
             throw ex;
         }

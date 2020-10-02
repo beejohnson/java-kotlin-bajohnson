@@ -10,7 +10,7 @@ public class BeeHiveTest {
     public void HoneyLevel() {
     BeeHive instance = new BeeHive(4.0);
     assertEquals(0.0, instance.getHoneyLevel(),0.0);
-    instance.setHoneyLevel(2.1);
+    instance.setHoneyLevel(4.0);
     assertEquals(4.0, instance.getHoneyLevel(),0.0);
     }
 
