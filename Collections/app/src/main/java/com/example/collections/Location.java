@@ -23,7 +23,25 @@ public class Location implements Comparable < Location >{ //comparable to itself
     }
 
     @Override
-    public int compareTo(Location location) {
-        return 0;
+    public int compareTo(Location other) {
+        int cmp;
+        cmp = this.name.compareTo(other.name);
+        if (cmp != 0) {
+            return cmp;
+        }
+        cmp = (this.longitude < other.longitude) ? -1 : (this.longitude > other.longitude) ? 1 : 0; //? 1 : 0 is short hand if
+        if (cmp != 0) {
+            return cmp;
+        }
+        cmp = (this.latitude < other.latitude) ? -1 : (this.latitude > other.latitude) ? 1 : 0;
+        if (cmp != 0) {
+            return cmp;
+        }
+        return 0; //you need to define the idea of less than
+    }
+    @Override
+    public int hashCode() {
+        return 7 * name.hashCode() + 13 * Double.hashCode(this.longitude) + 17 * Double.hashCode(this.latitude);
+
     }
 }
