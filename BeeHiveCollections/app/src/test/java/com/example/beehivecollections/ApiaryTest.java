@@ -12,7 +12,7 @@ public class ApiaryTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void invalidHeight() {
-        double badHiveHeight = -2.1;
+        double badHiveHeight = 2.1;
         String exceptionMessage = "Invalid height " + badHiveHeight + ". Must be positive.";
         try {
             Apiary instance = new Apiary(badHiveHeight);

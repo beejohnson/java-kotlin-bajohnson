@@ -8,7 +8,7 @@ public class ApiaryTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void invalidHeight() {
-        double badHiveHeight = -2.1;
+        double badHiveHeight = -2.5;
         String exceptionMessage = "Invalid height " + badHiveHeight + ". Must be positive.";
         try {
             Apiary instance = new Apiary(badHiveHeight);
@@ -75,15 +75,15 @@ public class ApiaryTest {
         assertEquals(newHoneyLevel, instance.getHoneyLevel(), 0.0);
     }
 
-    @Test
-    public void graynotoxined() {
+   /* @Test
+    public void graynotoxin() {
         double height = 2.1;
         Apiary instance = new Apiary(height);
         double honeyLevel = 1.0;
         assertEquals(false, instance.Graynotoxin(true));
         instance.Graynotoxin(true);
         assertEquals(true, instance.Graynotoxin(true));
-    }
+    }*/
 
     void makeBadHive() {
         Apiary bad = new Apiary(-3.2);

@@ -13,7 +13,7 @@ public interface Hive {
         return getLevel() <= 0.0;
     }
 
-    String getOwner();
+    //String getOwner();
 
-    void setOwner(String owner);
+    //void setOwner(String owner);
 }
