@@ -2,17 +2,13 @@ package com.example.beehivecollections;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class ApiaryTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void invalidHeight() {
-        double badHiveHeight = 2.1;
+        double badHiveHeight = -2.5;
         String exceptionMessage = "Invalid height " + badHiveHeight + ". Must be positive.";
         try {
             Apiary instance = new Apiary(badHiveHeight);
@@ -23,7 +19,7 @@ public class ApiaryTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void invalidHoneyLevel() {
+    public void invalidHoneyLevel() throws Exception {
         double hiveHeight = 2.1;
         Apiary instance = new Apiary(hiveHeight);
         double invalidHoneyLevel = -1.0;
@@ -41,7 +37,7 @@ public class ApiaryTest {
     public void emptyCombTrue() {
         double hiveHeight = 2.1;
         Apiary instance = new Apiary(hiveHeight);
-        assertTrue(instance.emptyComb());
+        assertEquals(true, instance.emptyComb());
     }
 
     @Test
@@ -50,7 +46,7 @@ public class ApiaryTest {
         Apiary instance = new Apiary(hiveHeight);
         double honeylevel = 0.0;
         instance.setHoneyLevel(honeylevel);
-        assertTrue(instance.emptyComb());
+        assertEquals(true, instance.emptyComb());
     }
 
     @Test
@@ -79,15 +75,15 @@ public class ApiaryTest {
         assertEquals(newHoneyLevel, instance.getHoneyLevel(), 0.0);
     }
 
-    @Test
-    public void graynotoxined() {
+   /* @Test
+    public void graynotoxin() {
         double height = 2.1;
         Apiary instance = new Apiary(height);
         double honeyLevel = 1.0;
-        assertFalse(instance.Graynotoxin(true));
+        assertEquals(false, instance.Graynotoxin(true));
         instance.Graynotoxin(true);
-        assertTrue(instance.Graynotoxin(true));
-    }
+        assertEquals(true, instance.Graynotoxin(true));
+    }*/
 
     void makeBadHive() {
         Apiary bad = new Apiary(-3.2);

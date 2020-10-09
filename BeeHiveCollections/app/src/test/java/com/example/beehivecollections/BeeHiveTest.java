@@ -2,25 +2,25 @@ package com.example.beehivecollections;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class BeeHiveTest {
 
     @Test
     public void HoneyLevel() {
-        BeeHive instance = new BeeHive(4.0);
-        assertEquals(0.0, instance.getHoneyLevel(),0.0);
-        instance.setHoneyLevel(4.0);
-        assertEquals(4.0, instance.getHoneyLevel(),0.0);
+    BeeHive instance = new BeeHive(4.0);
+    assertEquals(0.0, instance.getHoneyLevel(),0.0);
+    instance.setHoneyLevel(4.0);
+    assertEquals(4.0, instance.getHoneyLevel(),0.0);
     }
 
 
     @Test
     public void isCapped() {
         BeeHive instance = new BeeHive(4.0);
-        assertFalse(instance.isCapped());
+        assertEquals(false, instance.isCapped());
         instance.setCapped(true);
-        assertTrue(instance.isCapped());
+        assertEquals(true, instance.isCapped());
     }
 
     @Test

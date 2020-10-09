@@ -23,11 +23,16 @@ public class Apiary extends DefaultHive {
         }
     }
 
-    ArrayList < Frame > frames = new ArrayList<>();
+    ArrayList < Frame > frames = new ArrayList< Frame >();
 
     public Apiary(double height) {
         super(height);
-        frames.add(() -> false);
+        frames.add(new Frame() {
+            @Override
+            public boolean emptyComb() {
+                return false;
+            }
+        });
         for (int i = 1; i <= height + 3; ++i) {
             frames.add(new secondFrame(i));
         }

@@ -1,42 +1,47 @@
 package com.example.collections;
 
 import java.util.Collection;
-import java.util.Iterator;
-import java.util.Set;
 
-import static java.lang.Math.*;
+import static java.lang.Math.atan;
+import static java.lang.Math.cos;
+import static java.lang.Math.pow;
+import static java.lang.Math.sin;
+import static java.lang.Math.sqrt;
+import static java.lang.Math.toDegrees;
+import static java.lang.Math.toRadians;
 
-public class Location implements Comparable < Location >{ //comparable to itself
+// Immutable!
+public class Location implements Comparable < Location > {
     public double getLatitude() {
-
         return latitude;
     }
 
     public double getLongitude() {
-
         return longitude;
     }
 
     public String getName() {
-
         return name;
     }
 
-    private double latitude;
-    private double longitude;
     private String name;
+    private double latitude; // degrees
+    private double longitude; // degrees;
 
     public static double normalizeDegreeAngle(double angle) {
         while (angle > 180.0) { angle -= 360.0; }
-        while (angle > -180.0) {angle += 360.0; }
+        while (angle <= -180.0) { angle += 360.0; }
         return angle;
     }
+
     public Location(String name, double longitude, double latitude) {
         this.name=name;
         this.longitude=normalizeDegreeAngle(longitude);
         this.latitude=normalizeDegreeAngle(latitude);
     }
 
+    // transitive: a < b && b < c , then a < c
+    //  equality: a == b  <==> !(a<b) && !(b<a)
     @Override
     public int compareTo(Location other) {
         int cmp;
@@ -44,7 +49,7 @@ public class Location implements Comparable < Location >{ //comparable to itself
         if (cmp != 0) {
             return cmp;
         }
-        cmp = (this.longitude < other.longitude) ? -1 : (this.longitude > other.longitude) ? 1 : 0; //? 1 : 0 is short hand if
+        cmp = (this.longitude < other.longitude) ? -1 : (this.longitude > other.longitude) ? 1 : 0;
         if (cmp != 0) {
             return cmp;
         }
@@ -52,15 +57,19 @@ public class Location implements Comparable < Location >{ //comparable to itself
         if (cmp != 0) {
             return cmp;
         }
-        return 0; //you need to define the idea of less than
+        return 0;
     }
 
     @Override
     public boolean equals(Object to) {
-        return compareTo((Location) to) == 0;
+        return compareTo((Location) to)==0;
     }
 
     public double approximateNauticalMilesTo(Location to) {
+        // https://en.wikipedia.org/wiki/Great-circle_distance
+        // 1 nautical mile is 1 minute of arc latitude
+        // assumes earth is a sphere (1% error)
+
         double lambda1 = toRadians(longitude);
         double lambda2 = toRadians(to.longitude);
         double deltaLambda = lambda2 - lambda1;
@@ -81,14 +90,18 @@ public class Location implements Comparable < Location >{ //comparable to itself
 
         return delta;
     }
-    public static final double METERS_PER_MILE = 1609.334;
+
+    // https://en.wikipedia.org/wiki/Nautical_mile
+    public static final double METERS_PER_NAUTICAL_MILE=1852.0;
+    // https://en.wikipedia.org/wiki/Mile
+    public static final double METERS_PER_MILE=1609.344;
 
     public double approximateMetersTo(Location to) {
-        return approximateNauticalMilesTo(to)*METERS_PER_MILE;
+        return approximateNauticalMilesTo(to)*METERS_PER_NAUTICAL_MILE;
     }
 
     public double approximateMilesTo(Location to) {
-        return approximateMetersTo(to);
+        return approximateMetersTo(to)/METERS_PER_MILE;
     }
 
     @Override
@@ -103,8 +116,9 @@ public class Location implements Comparable < Location >{ //comparable to itself
             }
         }
     }
+
     public static void addNearbyLocationsInMeters(Collection<Location> results, Location center, double meters, Iterable<Location> search)  {
-        double nauticalMiles = meters;
+        double nauticalMiles = meters/METERS_PER_NAUTICAL_MILE;
         addNearbyLocationsInNauticalMiles(results,center,nauticalMiles, search);
     }
 
@@ -112,8 +126,8 @@ public class Location implements Comparable < Location >{ //comparable to itself
         double meters = miles*METERS_PER_MILE;
         addNearbyLocationsInMeters(results,center,meters, search);
     }
-
 }
+
 
 
 

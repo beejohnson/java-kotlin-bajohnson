@@ -7,7 +7,7 @@ public class DefaultHive implements Hive {
         if (height > 0.0) {
             return height;
         }
-        String message = "Invalid depth " + height  + "." +
+        String message = "Invalid height " + height  + "." +
                 " Must be positive.";
         throw new IllegalArgumentException(message);
     }
@@ -17,8 +17,8 @@ public class DefaultHive implements Hive {
     }
 
     @Override
-    public void setHeight(double depth) {
-        this.height = checkHeight(depth);
+    public void setHeight(double height) {
+        this.height = checkHeight(height);
     }
 
     private double level;
@@ -42,7 +42,7 @@ public class DefaultHive implements Hive {
     }
 
 
-    private String owner;
+    private String owner="";
     private String checkOwner(String owner) {
         if (owner != null) {
             return owner;
@@ -50,15 +50,15 @@ public class DefaultHive implements Hive {
         String message = "Invalid owner (null).  Must mot be null.";
         throw new IllegalArgumentException(message);
     }
-    @Override
-    public String getOwner() {
+   // @Override
+   /* public String getOwner() {
         return owner;
     }
 
     @Override
     public void setOwner(String owner) {
         this.owner = checkOwner(owner);
-    }
+    }*/
 
     public DefaultHive(double height) {
         this.height= checkHeight(height);
