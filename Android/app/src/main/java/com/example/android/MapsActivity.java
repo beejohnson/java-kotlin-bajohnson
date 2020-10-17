@@ -9,7 +9,10 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.Map;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -25,6 +28,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
     }
 
+    LatLng msydneyLatLng = new LatLng(-34, 151);
+    MarkerOptions mSydneyMarkerOptions = new MarkerOptions().position(msydneyLatLng).title("Marker in Sydney");
+    Marker mSydneyMarker;
+
+    LatLng mGJLatLng = new LatLng(39+4.0/60, -(108.0+34.0/60.0));
+    MarkerOptions mGJMarkerOptions = new MarkerOptions().position(mGJLatLng).title("Marker in Grand Junctioni");
+    Marker mGJMarker;
+
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -37,10 +48,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        mSydneyMarker = mMap.addMarker(mSydneyMarkerOptions);
+        mGJMarker = mMap.addMarker(mGJMarkerOptions);
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(mGJLatLng));
     }
 }
