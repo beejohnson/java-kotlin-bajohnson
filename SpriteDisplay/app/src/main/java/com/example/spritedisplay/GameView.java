@@ -7,6 +7,7 @@ import android.view.SurfaceView;
 import androidx.annotation.NonNull;
 
 public class GameView extends SurfaceView implements SurfaceHolder.Callback {
+    private MainThread thread;
 
     public GameView(Context context) {
         super(context);
@@ -26,6 +27,10 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     @Override
     public void surfaceDestroyed(SurfaceHolder holder) {
+
+    }
+
+    public void update() {
 
     }
 
