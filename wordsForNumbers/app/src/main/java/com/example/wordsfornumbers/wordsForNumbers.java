@@ -5,12 +5,27 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.io.PrintStream;
+import java.util.TreeMap;
 
 public class wordsForNumbers {
-    public static void main(String[] args) throws IOException {
+    BufferedReader in;
+    BufferedWriter out;
+
+    public wordsForNumbers(BufferedReader in, BufferedWriter out) {
+        this.in = in;
+        this.out = out;
+    }
+
+    public static void main(String[] args) throws Exception {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 
+    }
+
+    TreeMap< String, Integer > vars = new TreeMap< String , Integer >();
+
+    public void runIt() throws Exception {
         while (in.ready()) {
             int x = 0;
             for (String s : in.readLine().split(" ")) {
