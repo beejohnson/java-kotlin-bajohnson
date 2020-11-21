@@ -1,0 +1,1 @@
+This app is a simple program that I made following a tutorial at the following website: https://developer.android.com/courses/fundamentals-training/toc-v2
