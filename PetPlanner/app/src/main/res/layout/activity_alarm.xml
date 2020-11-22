@@ -5,35 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#989898"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    tools:context=".AlarmActivity">
 
-    <Button
-        android:id="@+id/start_button"
-        android:layout_width="124dp"
-        android:layout_height="98dp"
-        android:layout_marginStart="6dp"
-        android:backgroundTint="#2A2A4C"
-        android:fontFamily="serif"
-        android:forceDarkAllowed="false"
-        android:onClick="startbutton"
-        android:text="@string/start_button"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="181dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="180dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/petplanner_title" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pupper_clock" />
 
     <TextView
-        android:id="@+id/petplanner_title"
+        android:id="@+id/activity_text"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="650dp"
         android:background="#2A2A4C"
-        android:fontFamily="serif"
         android:gravity="center_horizontal|center_vertical"
-        android:text="@string/pet_planner"
+        android:text="Choose an Activity!"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
@@ -42,4 +33,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="163dp"
+        android:layout_height="34dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Set Alarm"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,6 +19,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+        android:scrollbarThumbHorizontal="@color/white"
+        android:scrollbarThumbVertical="@color/white"
+        app:backgroundTint="#2A2A4C"
+        app:rippleColor="#FFFFFF"
         app:srcCompat="@android:drawable/btn_star" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
