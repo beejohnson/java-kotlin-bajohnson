@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <Button
+        android:id="@+id/c_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="C"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/h_breeds"
+        app:layout_constraintStart_toEndOf="@+id/b_breeds" />
+
+    <Button
+        android:id="@+id/e_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="E"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/j_breeds"
+        app:layout_constraintStart_toEndOf="@+id/d_breeds" />
+
+    <Button
+        android:id="@+id/d_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="D"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/i_breeds"
+        app:layout_constraintStart_toEndOf="@+id/c_breeds" />
+
+    <Button
+        android:id="@+id/j_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="J"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/o_breeds"
+        app:layout_constraintStart_toEndOf="@+id/i_breeds" />
+
+    <Button
+        android:id="@+id/i_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="I"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/n_breeds"
+        app:layout_constraintStart_toEndOf="@+id/h_breeds" />
+
+    <Button
+        android:id="@+id/h_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="H"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/m_breeds"
+        app:layout_constraintStart_toEndOf="@+id/g_breeds" />
+
+    <Button
+        android:id="@+id/g_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="G"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/l_breeds"
+        app:layout_constraintStart_toEndOf="@+id/f_breeds" />
+
+    <Button
+        android:id="@+id/o_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="O"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/t_breeds"
+        app:layout_constraintStart_toEndOf="@+id/n_breeds" />
+
+    <Button
+        android:id="@+id/n_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="N"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/s_breeds"
+        app:layout_constraintStart_toEndOf="@+id/m_breeds" />
+
+    <Button
+        android:id="@+id/l_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="L"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/q_breeds"
+        app:layout_constraintStart_toEndOf="@+id/k_breeds" />
+
+    <Button
+        android:id="@+id/m_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="M"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/r_breeds"
+        app:layout_constraintStart_toEndOf="@+id/l_breeds" />
+
+    <Button
+        android:id="@+id/t_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="T"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/y_breeds"
+        app:layout_constraintStart_toEndOf="@+id/s_breeds" />
+
+    <Button
+        android:id="@+id/s_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="S"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/x_breeds"
+        app:layout_constraintStart_toEndOf="@+id/r_breeds" />
+
+    <Button
+        android:id="@+id/r_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="R"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/w_breeds"
+        app:layout_constraintStart_toEndOf="@+id/q_breeds" />
+
+    <Button
+        android:id="@+id/q_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="Q"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/v_breeds"
+        app:layout_constraintStart_toEndOf="@+id/p_breeds" />
+
+    <Button
+        android:id="@+id/y_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="Y"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/x_breeds" />
+
+    <Button
+        android:id="@+id/x_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="X"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/w_breeds" />
+
+    <Button
+        android:id="@+id/w_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="W"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/v_breeds" />
+
+    <Button
+        android:id="@+id/v_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="V"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/u_breeds" />
+
+    <Button
+        android:id="@+id/u_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="U"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/p_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="P"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/u_breeds"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/k_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="K"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/p_breeds"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/f_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="F"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/k_breeds"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/b_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:text="B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/g_breeds"
+        app:layout_constraintStart_toEndOf="@+id/a_breeds" />
+
+    <TextView
+        android:id="@+id/doggopedia_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginBottom="650dp"
+        android:background="#00BCD4"
+        android:gravity="clip_vertical|center_vertical"
+        android:text="@string/doggopedia"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/a_breeds"
+        android:layout_width="64dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:gravity="clip_horizontal"
+        android:text="A"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/f_breeds"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
