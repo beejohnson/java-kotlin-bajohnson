@@ -11,4 +11,9 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="start_button">Start</string>
     <string name="pet_planner">Pet Planner</string>
+    <string name="choose_an_activity">Choose an Activity!</string>
+    <string name="set_alarm">Set Alarm</string>
+    <string name="dog_holding_clock">Dog Holding Clock</string>
+    <string name="colon">:</string>
+    <string name="no_alarms">No Alarms</string>
 </resources>
