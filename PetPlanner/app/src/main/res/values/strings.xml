@@ -19,4 +19,5 @@
     <string name="main_menu">Main Menu</string>
     <string name="dog_clock">dog_clock</string>
     <string name="alarmtitle">Pet Alarm</string>
+    <string name="alarm_on_off">toggle</string>
 </resources>

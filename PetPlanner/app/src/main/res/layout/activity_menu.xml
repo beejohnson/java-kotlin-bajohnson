@@ -12,7 +12,7 @@
         android:id="@+id/menu_title"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="600dp"
+        android:layout_marginBottom="550dp"
         android:background="#2A2A4C"
         android:fontFamily="serif"
         android:gravity="center_horizontal|center_vertical"
