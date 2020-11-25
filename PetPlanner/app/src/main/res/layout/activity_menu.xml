@@ -31,12 +31,29 @@
         android:id="@+id/pupper_clock"
         android:layout_width="167dp"
         android:layout_height="155dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="200dp"
         android:contentDescription="@string/dog_clock"
+        android:onClick="showPupperClock"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menu_title"
-        app:srcCompat="@drawable/pupper_clock"
-        android:onClick="showPupperClock" />
+        app:srcCompat="@drawable/pupper_clock" />
+
+    <TextView
+        android:id="@+id/alarmtext"
+        android:layout_width="124dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="80dp"
+        android:background="#2A2A4C"
+        android:fontFamily="serif"
+        android:text="@string/alarmtext"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/pupper_clock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_title" />
 </androidx.constraintlayout.widget.ConstraintLayout>
