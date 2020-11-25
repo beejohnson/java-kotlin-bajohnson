@@ -60,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }*/
 
+    public void startbutton(View view) {
+        Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+        startActivity(intent);
+    }
+
 }
 
 

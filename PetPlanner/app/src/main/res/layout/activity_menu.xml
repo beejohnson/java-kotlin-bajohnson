@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#989898"
+    tools:context=".MenuActivity">
+
+
+    <TextView
+        android:id="@+id/menu_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="600dp"
+        android:background="#2A2A4C"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/main_menu"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/pupper_clock"
+        android:layout_width="167dp"
+        android:layout_height="155dp"
+        android:layout_marginBottom="300dp"
+        android:contentDescription="@string/dog_clock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_title"
+        app:srcCompat="@drawable/pupper_clock"
+        android:onClick="showPupperClock" />
+</androidx.constraintlayout.widget.ConstraintLayout>
