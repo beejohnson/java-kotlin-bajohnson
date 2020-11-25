@@ -14,6 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="300dp"
+        android:amPmTextColor="#FFFFFF"
         android:headerBackground="#2A2A4C"
         android:numbersBackgroundColor="#FFFFFF"
         android:numbersInnerTextColor="#000000"
